@@ -132,3 +132,20 @@ footer {
   flex: 1 1 50%;
   text-align: center;
 }
+
+/* Carousel Section */
+.carousel-section {
+  background: linear-gradient(to bottom, #8E44AD, #2b0a11);
+  border-radius: 1rem;
+  padding: 2rem;
+  margin: 3rem auto;
+  max-width: 1080px;
+}
+
+.carousel-section .carousel-item img {
+  width: 100%;
+  height: auto;
+  max-height: 600px;
+  object-fit: cover;
+  border-radius: 1rem;
+}
