@@ -203,4 +203,12 @@ footer {
   text-align: center;
 }
 
+.quote-card-light {
+  background-color: rgba(255, 255, 255, 0.65);
+  color: #8E44AD;
+  font-style: italic;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
 
