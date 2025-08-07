@@ -122,14 +122,10 @@ footer {
   border-radius: 1rem;
   padding: 2rem;
   margin: 3rem auto;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
   align-items: center;
 }
 
-.event-flyer-section .flyer-text {
-  flex: 1 1 50%;
+.event-flyer-section {
   color: #FDFEFE;
 }
 
@@ -138,8 +134,7 @@ footer {
   list-style-type: disc;
 }
 
-.event-flyer-section .flyer-image-wrapper {
-  flex: 1 1 50%;
+.event-flyer-section {
   text-align: center;
 }
 
