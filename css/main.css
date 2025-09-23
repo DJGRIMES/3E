@@ -2,32 +2,42 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&family=Chivo:wght@400;600&display=swap');
 
+:root {
+  --cosmic-plum: #5C1B5E;
+  --radiant-magenta: #D72675;
+  --sunset-gold: #F7B733;
+  --smoke-sage: #96A67C;
+  --sky-glow: #3FA7D6;
+  --cloud-white: #FDFEFE;
+  --midnight-groove: #2C1E2F;
+}
+
 body {
   font-family: 'Chivo', sans-serif;
-  background-color: #2C3E50;
-  color: #FDFEFE;
+  background-color: var(--cloud-white);
+  color: var(--midnight-groove);
   margin: 0;
 }
 
 h1, h2, h3 {
   font-family: 'Shrikhand', cursive;
-  color: #FDFEFE;
+  color: var(--cosmic-plum);
 }
 
 .hero {
   width: 100vw;
   margin-left: calc(-50vw + 50%);
-  background: linear-gradient(to bottom, rgba(46, 16, 51, 0.6), rgba(11, 2, 13, 0.7)),
-            url('/media/eye.jpg') center center/cover no-repeat;
-  color: #FDFEFE;
-  text-shadow: 1px 1px 5px #000;
+  background: linear-gradient(to bottom, rgba(92, 27, 94, 0.7), rgba(44, 30, 47, 0.85)),
+            url('/media/wiz.png') center center/cover no-repeat;
+  color: var(--cloud-white);
+  text-shadow: 1px 1px 5px rgba(44, 30, 47, 0.6);
   padding: 8rem 2rem;
 }
 
 #headderTxt {
   /* Your custom styles here */
   font-size: 4rem; /* Example size */
-  color: #F39C12; /* Example color (Warm Gold from your palette) */
+  color: var(--sunset-gold); /* Example color (Warm Gold from your palette) */
   text-align: center; /* Example alignment */
   margin-bottom: 1rem; /* Example spacing */
 }
@@ -40,10 +50,10 @@ h1, h2, h3 {
 }
 
 .text-block {
-  background: linear-gradient(to bottom, #2b0a11, #8E44AD);
+  background: linear-gradient(to bottom, var(--midnight-groove), var(--cosmic-plum));
   padding: 2rem;
   border-radius: 1rem;
-  color: #FDFEFE;
+  color: var(--cloud-white);
   margin-bottom: 2rem;
 }
 
@@ -62,32 +72,32 @@ h1, h2, h3 {
 
 .flyer-image:hover {
   transform: scale(1.05);
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 6px 24px rgba(92, 27, 94, 0.4);
   z-index: 10;
 }
 
 .testimonial-slider .quote {
   font-style: italic;
   padding: 1rem;
-  border-left: 4px solid #27AE60;
+  border-left: 4px solid var(--smoke-sage);
   margin-bottom: 1rem;
-  background: linear-gradient(to bottom, #8E44AD, #2b0a11);
+  background: linear-gradient(to bottom, rgba(96, 166, 124, 0.15), rgba(44, 30, 47, 0.45));
   border-radius: 0.5rem;
-  color: #FDFEFE;
+  color: var(--midnight-groove);
 }
 
 .card-grid .card {
   border: none;
   border-radius: 1rem;
-  background: linear-gradient(to bottom, #8E44AD, #2b0a11);
-  color: #FDFEFE;
+  background: linear-gradient(135deg, rgba(92, 27, 94, 0.95), rgba(215, 38, 117, 0.9));
+  color: var(--cloud-white);
   padding: 1.5rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .signal-cta {
-  background: linear-gradient(to bottom, #8E44AD, #2b0a11);
-  color: #FDFEFE;
+  background: linear-gradient(135deg, rgba(63, 167, 214, 0.95), rgba(215, 38, 117, 0.9));
+  color: var(--cloud-white);
   border-radius: 1rem;
   padding: 2rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
@@ -101,8 +111,8 @@ h1, h2, h3 {
 }
 
 #grounding-message {
-  background: linear-gradient(to bottom, #8E44AD 20%, #2b0a11 100%);
-  color: #FDFEFE;
+  background: linear-gradient(to bottom, rgba(92, 27, 94, 0.95) 20%, rgba(44, 30, 47, 0.98) 100%);
+  color: var(--cloud-white);
   padding: 3rem 1rem;
   border-radius: 1rem;
   box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
@@ -118,7 +128,7 @@ footer {
 }
 
 .event-flyer-section {
-  background: linear-gradient(to bottom, #2b0a11, #8E44AD);
+  background: linear-gradient(160deg, rgba(92, 27, 94, 0.95), rgba(63, 167, 214, 0.9));
   border-radius: 1rem;
   padding: 2rem;
   margin: 3rem auto;
@@ -126,7 +136,7 @@ footer {
 }
 
 .event-flyer-section {
-  color: #FDFEFE;
+  color: var(--cloud-white);
 }
 
 .event-flyer-section .flyer-text ul {
@@ -140,7 +150,7 @@ footer {
 
 /* Carousel Section */
 .carousel-section {
-  background: linear-gradient(to bottom, #8E44AD, #2b0a11);
+  background: linear-gradient(160deg, rgba(92, 27, 94, 0.95), rgba(44, 30, 47, 0.98));
   border-radius: 1rem;
   padding: 2rem;
   margin: 3rem auto;
@@ -160,17 +170,17 @@ footer {
   font-style: italic;
   margin: 2rem 0;
   padding-left: 1.5rem;
-  border-left: 4px solid #F39C12;
-  color: #FDFEFE;
-  background: linear-gradient(to right, rgba(142, 68, 173, 0.1), transparent);
+  border-left: 4px solid var(--sunset-gold);
+  color: var(--midnight-groove);
+  background: linear-gradient(to right, rgba(247, 183, 51, 0.1), transparent);
   border-radius: 0.5rem;
 }
 
 .testimonial-block {
-  background: linear-gradient(to bottom, #8E44AD, #2b0a11);
+  background: linear-gradient(160deg, rgba(92, 27, 94, 0.95), rgba(44, 30, 47, 0.98));
   padding: 2rem;
   border-radius: 1rem;
-  color: #FDFEFE;
+  color: var(--cloud-white);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
 }
 
@@ -181,10 +191,10 @@ footer {
 }
 
 .quote-card {
-  background: linear-gradient(to bottom, #8E44AD, #2b0a11);
+  background: linear-gradient(160deg, rgba(92, 27, 94, 0.95), rgba(44, 30, 47, 0.98));
   padding: 2rem;
   border-radius: 1rem;
-  color: #FDFEFE;
+  color: var(--cloud-white);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
   height: 100%;
   display: flex;
@@ -199,11 +209,11 @@ footer {
 }
 
 .quote-card-light {
-  background-color: rgba(255, 255, 255, 0.65);
-  color: #8E44AD;
+  background-color: rgba(253, 254, 254, 0.85);
+  color: var(--cosmic-plum);
   font-style: italic;
   padding: 1.5rem;
   border-radius: 0.75rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 12px rgba(92, 27, 94, 0.2);
 }
 
