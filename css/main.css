@@ -16,6 +16,7 @@ body {
   font-family: 'Chivo', sans-serif;
   background-color: var(--cosmic-plum);
   color: var(--cloud-white);
+
   margin: 0;
   line-height: 1.6;
 }
