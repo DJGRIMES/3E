@@ -10,25 +10,32 @@
   --sky-glow: #3FA7D6;
   --cloud-white: #FDFEFE;
   --midnight-groove: #2C1E2F;
+  --aurora-gradient: linear-gradient(160deg, rgba(92, 27, 94, 0.95), rgba(63, 167, 214, 0.9));
 }
 
 body {
   font-family: 'Chivo', sans-serif;
-  background-color: var(--cloud-white);
-  color: var(--midnight-groove);
+  background-color: var(--midnight-groove);
+  background-image: var(--aurora-gradient);
+  background-attachment: fixed;
+  background-size: cover;
+  color: var(--cloud-white);
   margin: 0;
 }
 
 h1, h2, h3 {
   font-family: 'Shrikhand', cursive;
-  color: var(--cosmic-plum);
+  color: var(--sunset-gold);
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
 }
 
 .hero {
   width: 100vw;
   margin-left: calc(-50vw + 50%);
-  background: linear-gradient(to bottom, rgba(92, 27, 94, 0.7), rgba(44, 30, 47, 0.85)),
-            url('/media/wiz.png') center center/cover no-repeat;
+  background-image: linear-gradient(160deg, rgba(92, 27, 94, 0.85), rgba(63, 167, 214, 0.8)),
+                    url('/media/wiz.png');
+  background-position: center;
+  background-size: cover;
   color: var(--cloud-white);
   text-shadow: 1px 1px 5px rgba(44, 30, 47, 0.6);
   padding: 8rem 2rem;
@@ -46,15 +53,20 @@ h1, h2, h3 {
 .section {
   padding: 3rem 1rem;
   max-width: 1080px;
-  margin: 0 auto;
+  margin: 0 auto 3rem auto;
+  background: var(--aurora-gradient);
+  color: var(--cloud-white);
+  border-radius: 1.25rem;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
 }
 
 .text-block {
-  background: linear-gradient(to bottom, var(--midnight-groove), var(--cosmic-plum));
+  background: var(--aurora-gradient);
   padding: 2rem;
   border-radius: 1rem;
   color: var(--cloud-white);
   margin-bottom: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .flyer-image {
@@ -79,28 +91,30 @@ h1, h2, h3 {
 .testimonial-slider .quote {
   font-style: italic;
   padding: 1rem;
-  border-left: 4px solid var(--smoke-sage);
+  border-left: 4px solid var(--sunset-gold);
   margin-bottom: 1rem;
-  background: linear-gradient(to bottom, rgba(96, 166, 124, 0.15), rgba(44, 30, 47, 0.45));
+  background: rgba(0, 0, 0, 0.45);
   border-radius: 0.5rem;
-  color: var(--midnight-groove);
+  color: var(--cloud-white);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
 }
 
 .card-grid .card {
   border: none;
   border-radius: 1rem;
-  background: linear-gradient(135deg, rgba(92, 27, 94, 0.95), rgba(215, 38, 117, 0.9));
+  background: var(--aurora-gradient);
   color: var(--cloud-white);
   padding: 1.5rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
 }
 
 .signal-cta {
-  background: linear-gradient(135deg, rgba(63, 167, 214, 0.95), rgba(215, 38, 117, 0.9));
+  background: var(--aurora-gradient);
   color: var(--cloud-white);
   border-radius: 1rem;
   padding: 2rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .qr-image {
@@ -111,14 +125,15 @@ h1, h2, h3 {
 }
 
 #grounding-message {
-  background: linear-gradient(to bottom, rgba(92, 27, 94, 0.95) 20%, rgba(44, 30, 47, 0.98) 100%);
+  background: var(--aurora-gradient);
   color: var(--cloud-white);
   padding: 3rem 1rem;
   border-radius: 1rem;
-  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 0 25px rgba(0, 0, 0, 0.35);
   max-width: 1080px;
   margin: 0 auto;
   text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 footer {
@@ -128,11 +143,12 @@ footer {
 }
 
 .event-flyer-section {
-  background: linear-gradient(160deg, rgba(92, 27, 94, 0.95), rgba(63, 167, 214, 0.9));
+  background: var(--aurora-gradient);
   border-radius: 1rem;
   padding: 2rem;
   margin: 3rem auto;
   align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .event-flyer-section {
@@ -150,11 +166,12 @@ footer {
 
 /* Carousel Section */
 .carousel-section {
-  background: linear-gradient(160deg, rgba(92, 27, 94, 0.95), rgba(44, 30, 47, 0.98));
+  background: var(--aurora-gradient);
   border-radius: 1rem;
   padding: 2rem;
   margin: 3rem auto;
   max-width: 1080px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .carousel-section .carousel-item img {
@@ -169,19 +186,21 @@ footer {
   font-size: 1.25rem;
   font-style: italic;
   margin: 2rem 0;
-  padding-left: 1.5rem;
+  padding: 1.5rem;
   border-left: 4px solid var(--sunset-gold);
-  color: var(--midnight-groove);
-  background: linear-gradient(to right, rgba(247, 183, 51, 0.1), transparent);
-  border-radius: 0.5rem;
+  color: var(--cloud-white);
+  background: rgba(0, 0, 0, 0.45);
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
 }
 
 .testimonial-block {
-  background: linear-gradient(160deg, rgba(92, 27, 94, 0.95), rgba(44, 30, 47, 0.98));
+  background: var(--aurora-gradient);
   padding: 2rem;
   border-radius: 1rem;
   color: var(--cloud-white);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .testimonial-title {
@@ -191,15 +210,16 @@ footer {
 }
 
 .quote-card {
-  background: linear-gradient(160deg, rgba(92, 27, 94, 0.95), rgba(44, 30, 47, 0.98));
+  background: var(--aurora-gradient);
   padding: 2rem;
   border-radius: 1rem;
   color: var(--cloud-white);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45);
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .quote-text {
@@ -209,11 +229,12 @@ footer {
 }
 
 .quote-card-light {
-  background-color: rgba(253, 254, 254, 0.85);
-  color: var(--cosmic-plum);
+  background: rgba(0, 0, 0, 0.55);
+  color: var(--cloud-white);
   font-style: italic;
   padding: 1.5rem;
   border-radius: 0.75rem;
-  box-shadow: 0 4px 12px rgba(92, 27, 94, 0.2);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
