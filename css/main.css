@@ -37,7 +37,7 @@ h1, h2, h3 {
 .hero {
   width: 100vw;
   margin-left: calc(-50vw + 50%);
-  background-image: var(--hero-gradient), url('/media/wiz.png');
+  background-image: var(--hero-gradient), url('/media/nov25banner.png');
   background-position: center;
   background-size: cover;
   color: var(--moonlit-cream);
