@@ -1,0 +1,84 @@
+{
+  "event_id": "third-eye-craft-affair-2025-12-13",
+  "source": "poster_dec_13_2025",
+  "event": {
+    "name": "Third Eye Craft Affair",
+    "tagline": "Kick off the holidays with crafts, cannabis, and community.",
+    "date": "2025-12-13",
+    "time": "12:00 PM – 6:00 PM",
+    "location": {
+      "venue_name": "The Fledge",
+      "street": "1300 Eureka St.",
+      "city": "Lansing",
+      "state": "MI",
+      "zip": "48912"
+    },
+    "pricing": {
+      "headline": "$20 entry or $10 with 4 donated items",
+    },
+    "age_policy": "Must be 21+ or 18+ with valid med-card to participate.",
+    "music_lineup": [
+      "Ganja Girl",
+      "VNMS",
+      "Chef Surge",
+      "Juan Treviño",
+      "K Lala",
+      "Bass Owl",
+      "Nasty Nate"
+    ],
+    "food_vendor": "Ben’s Island Grindz",
+    "poster_copy_raw": "CELEBRATE THE SEASON WITH US AT OUR FINAL EVENT OF THE YEAR!
+ WE ARE PULLING OUT ALL THE STOPS TO CREATE A MEMORABLE
+ EXPERIENCE FOR EVERYONE! ENJOY MUSIC FROM GANJA GIRL, VNMS,
+ CHEF SURGE, JUAN TREVIÑO, K LALA, BASS OWL & NASTY NATE!
+ INDULGE IN DELICIOUS OFFERINGS FROM BEN’S ISLAND GRINDZ!
+ AND ALSO CHECK OUT OUR SPONSORED DAB AND FLOWER BAR,
+ KNOWN AS THE EMERALD CITY! FOLLOW THE YELLOW BRICK ROAD!
+ DON’T MISS THIS OPPORTUNITY TO SUPPORT LOCAL ARTISANS!
+ BRING YOUR FRIENDS AND FAMILY ALONG FOR A DAY FILLED WITH FUN,
+ CREATIVITY AND COMMUNITY SPIRIT!!! WE’VE GOT AMAZING VENDORS,
+ FUN AND GAMES WITH GAME WARDEN GABBY, AND AN
+ ALL AROUND AWESOME VIBRANT ATMOSPHERE!
+ IT’S THE PERFECT WAY TO KICK OFF THE HOLIDAYS!
+MUST BE 21 OR 18+ WITH VALID MED-CARD TO PARTICIPATE",
+
+  "style": {
+    "colors": {
+      "background_primary": {
+        "name": "Deep Night Purple",
+        "hex": "#1A0824",
+        "usage": "Site body background, hero sections, footer backgrounds."
+      },
+      "accent_primary": {
+        "name": "Portal Magenta",
+        "hex": "#B12E7F",
+        "usage": "Section headers, borders, key accents, links on light backgrounds."
+      },
+      "accent_secondary": {
+        "name": "Solstice Orange",
+        "hex": "#FF8A3C",
+        "usage": "Primary buttons, CTA backgrounds, badges, important icons."
+      },
+      "highlight": {
+        "name": "Moon Glow Gold",
+        "hex": "#FFD66B",
+        "usage": "Button text on dark backgrounds, small highlight text, rating stars or decorative lines."
+      },
+      "panel_light": {
+        "name": "Frosted Lilac",
+        "hex": "#E1D4FF",
+        "usage": "Card backgrounds, content panels layered over dark backgrounds."
+      },
+      "panel_lighter": {
+        "name": "Snow Mist",
+        "hex": "#F7F7FF",
+        "usage": "Main content background, long-form text sections, FAQ blocks."
+      },
+      "divider": {
+        "name": "Evergreen Shadow",
+        "hex": "#10312F",
+        "usage": "Thin dividers, borders, and subtle outlines; secondary button outlines."
+      }
+    }
+  }
+}
