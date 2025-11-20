@@ -3,40 +3,41 @@
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&family=Chivo:wght@400;600&display=swap');
 
 :root {
-  --cosmic-plum: #5C1B5E;
-  --radiant-magenta: #D72675;
-  --sunset-gold: #F7B733;
-  --smoke-sage: #96A67C;
-  --sky-glow: #3FA7D6;
-  --cloud-white: #FDFEFE;
-  --midnight-groove: #2C1E2F;
-  --aurora-gradient: linear-gradient(160deg, rgba(92, 27, 94, 0.95), rgba(63, 167, 214, 0.9));
+  --background-primary: #1A0824; /* Deep Night Purple */
+  --accent-primary: #B12E7F; /* Portal Magenta */
+  --accent-secondary: #FF8A3C; /* Solstice Orange */
+  --highlight-gold: #FFD66B; /* Moon Glow Gold */
+  --panel-light: #E1D4FF; /* Frosted Lilac */
+  --panel-lighter: #F7F7FF; /* Snow Mist */
+  --divider: #10312F; /* Evergreen Shadow */
+  --aurora-gradient: linear-gradient(150deg, rgba(26, 8, 36, 0.95), rgba(177, 46, 127, 0.9), rgba(255, 138, 60, 0.85));
+  --text-on-dark: #F7F7FF;
 }
 
 body {
   font-family: 'Chivo', sans-serif;
-  background-color: var(--midnight-groove);
+  background-color: var(--background-primary);
   background-image: var(--aurora-gradient);
   background-attachment: fixed;
   background-size: cover;
-  color: var(--cloud-white);
+  color: var(--text-on-dark);
   margin: 0;
 }
 
 h1, h2, h3 {
   font-family: 'Shrikhand', cursive;
-  color: var(--sunset-gold);
+  color: var(--highlight-gold);
   text-shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
 }
 
 .hero {
   width: 100vw;
   margin-left: calc(-50vw + 50%);
-  background-image: linear-gradient(160deg, rgba(92, 27, 94, 0.85), rgba(63, 167, 214, 0.8)),
+  background-image: linear-gradient(160deg, rgba(177, 46, 127, 0.88), rgba(255, 138, 60, 0.82)),
                     url('/media/wiz.png');
   background-position: center;
   background-size: cover;
-  color: var(--cloud-white);
+  color: var(--text-on-dark);
   text-shadow: 1px 1px 5px rgba(44, 30, 47, 0.6);
   padding: 8rem 2rem;
 }
@@ -44,7 +45,7 @@ h1, h2, h3 {
 #headderTxt {
   /* Your custom styles here */
   font-size: 4rem; /* Example size */
-  color: var(--sunset-gold); /* Example color (Warm Gold from your palette) */
+  color: var(--highlight-gold); /* Example color (Warm Gold from your palette) */
   text-align: center; /* Example alignment */
   margin-bottom: 1rem; /* Example spacing */
 }
@@ -55,18 +56,18 @@ h1, h2, h3 {
   max-width: 1080px;
   margin: 0 auto 3rem auto;
   background: var(--aurora-gradient);
-  color: var(--cloud-white);
+  color: var(--text-on-dark);
   border-radius: 1.25rem;
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
 }
 
 .text-block {
-  background: var(--aurora-gradient);
+  background: linear-gradient(135deg, rgba(225, 212, 255, 0.95), rgba(247, 247, 255, 0.92));
   padding: 2rem;
   border-radius: 1rem;
-  color: var(--cloud-white);
+  color: var(--background-primary);
   margin-bottom: 2rem;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(16, 49, 47, 0.25);
 }
 
 .flyer-image {
@@ -84,18 +85,18 @@ h1, h2, h3 {
 
 .flyer-image:hover {
   transform: scale(1.05);
-  box-shadow: 0 6px 24px rgba(92, 27, 94, 0.4);
+  box-shadow: 0 6px 24px rgba(177, 46, 127, 0.4);
   z-index: 10;
 }
 
 .testimonial-slider .quote {
   font-style: italic;
   padding: 1rem;
-  border-left: 4px solid var(--sunset-gold);
+  border-left: 4px solid var(--highlight-gold);
   margin-bottom: 1rem;
   background: rgba(0, 0, 0, 0.45);
   border-radius: 0.5rem;
-  color: var(--cloud-white);
+  color: var(--text-on-dark);
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
 }
 
@@ -103,18 +104,18 @@ h1, h2, h3 {
   border: none;
   border-radius: 1rem;
   background: var(--aurora-gradient);
-  color: var(--cloud-white);
+  color: var(--text-on-dark);
   padding: 1.5rem;
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
 }
 
 .signal-cta {
   background: var(--aurora-gradient);
-  color: var(--cloud-white);
+  color: var(--text-on-dark);
   border-radius: 1rem;
   padding: 2rem;
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(16, 49, 47, 0.25);
 }
 
 .qr-image {
@@ -126,14 +127,14 @@ h1, h2, h3 {
 
 #grounding-message {
   background: var(--aurora-gradient);
-  color: var(--cloud-white);
+  color: var(--text-on-dark);
   padding: 3rem 1rem;
   border-radius: 1rem;
   box-shadow: inset 0 0 25px rgba(0, 0, 0, 0.35);
   max-width: 1080px;
   margin: 0 auto;
   text-align: center;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(16, 49, 47, 0.25);
 }
 
 footer {
@@ -148,11 +149,11 @@ footer {
   padding: 2rem;
   margin: 3rem auto;
   align-items: center;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(16, 49, 47, 0.25);
 }
 
 .event-flyer-section {
-  color: var(--cloud-white);
+  color: var(--text-on-dark);
 }
 
 .event-flyer-section .flyer-text ul {
@@ -171,7 +172,7 @@ footer {
   padding: 2rem;
   margin: 3rem auto;
   max-width: 1080px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(16, 49, 47, 0.25);
 }
 
 .carousel-section .carousel-item img {
@@ -187,8 +188,8 @@ footer {
   font-style: italic;
   margin: 2rem 0;
   padding: 1.5rem;
-  border-left: 4px solid var(--sunset-gold);
-  color: var(--cloud-white);
+  border-left: 4px solid var(--highlight-gold);
+  color: var(--text-on-dark);
   background: rgba(0, 0, 0, 0.45);
   border-radius: 0.75rem;
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
@@ -198,9 +199,9 @@ footer {
   background: var(--aurora-gradient);
   padding: 2rem;
   border-radius: 1rem;
-  color: var(--cloud-white);
+  color: var(--text-on-dark);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(16, 49, 47, 0.25);
 }
 
 .testimonial-title {
@@ -213,13 +214,13 @@ footer {
   background: var(--aurora-gradient);
   padding: 2rem;
   border-radius: 1rem;
-  color: var(--cloud-white);
+  color: var(--text-on-dark);
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45);
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(16, 49, 47, 0.25);
 }
 
 .quote-text {
@@ -230,11 +231,11 @@ footer {
 
 .quote-card-light {
   background: rgba(0, 0, 0, 0.55);
-  color: var(--cloud-white);
+  color: var(--panel-lighter);
   font-style: italic;
   padding: 1.5rem;
   border-radius: 0.75rem;
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.45);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(16, 49, 47, 0.25);
 }
 
