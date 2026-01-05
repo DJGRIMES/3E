@@ -89,6 +89,24 @@ h1, h2, h3 {
   z-index: 10;
 }
 
+.flyer-carousel {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.flyer-carousel .carousel-item {
+  display: flex;
+  justify-content: center;
+}
+
+.flyer-carousel-image {
+  max-height: 640px;
+  object-fit: contain;
+  width: 100%;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
 .testimonial-slider .quote {
   font-style: italic;
   padding: 1rem;
