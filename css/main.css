@@ -34,12 +34,36 @@ h1, h2, h3 {
   width: 100vw;
   margin-left: calc(-50vw + 50%);
   background-image: linear-gradient(160deg, rgba(177, 46, 127, 0.88), rgba(255, 138, 60, 0.82)),
-                    url('/media/wiz.png');
+                    url('../media/assets/third-eye-craft-logo-illustration.jpg');
   background-position: center;
   background-size: cover;
   color: var(--text-on-dark);
   text-shadow: 1px 1px 5px rgba(44, 30, 47, 0.6);
-  padding: 8rem 2rem;
+  padding: 6rem 2rem;
+  min-height: 480px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.hero-inner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.hero .lead {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 0 auto 1.5rem;
+  max-width: 720px;
+  color: rgba(247, 247, 255, 0.9);
+}
+
+.eyebrow {
+  font-size: 0.9rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  color: rgba(255, 255, 255, 0.85);
 }
 
 #headderTxt {
@@ -59,6 +83,36 @@ h1, h2, h3 {
   color: var(--text-on-dark);
   border-radius: 1.25rem;
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+}
+
+.section-title {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+  color: var(--highlight-gold);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.section-subtitle {
+  color: rgba(247, 247, 255, 0.85);
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.section-heading h2 {
+  margin-bottom: 0.25rem;
+}
+
+.section-heading p {
+  max-width: 720px;
+  margin: 0 auto;
+  color: rgba(247, 247, 255, 0.92);
+}
+
+.merch-callout {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.07), rgba(177, 46, 127, 0.25));
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .text-block {
@@ -92,11 +146,6 @@ h1, h2, h3 {
 .flyer-carousel {
   max-width: 960px;
   margin: 0 auto;
-}
-
-.flyer-carousel .carousel-item {
-  display: flex;
-  justify-content: center;
 }
 
 .flyer-carousel-image {
@@ -201,6 +250,43 @@ footer {
   color: var(--text-on-dark);
   border: 1px solid rgba(16, 49, 47, 0.25);
   box-shadow: inset 0 0 18px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.save-the-date-image {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 1rem;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
+  object-fit: cover;
+}
+
+.save-the-date-copy ul {
+  padding-left: 1rem;
+  color: rgba(247, 247, 255, 0.9);
+}
+
+.save-the-date-copy h3 {
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+}
+
+.save-the-date-copy {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .save-the-date-card {
+    flex-direction: row;
+    text-align: left;
+  }
+  .save-the-date-copy {
+    text-align: left;
+  }
 }
 
 .save-the-date-card .eyebrow {
@@ -234,21 +320,99 @@ footer {
 }
 
 /* Carousel Section */
-.carousel-section {
+.photo-grid-section {
   background: var(--aurora-gradient);
   border-radius: 1rem;
-  padding: 2rem;
+  padding: 3rem 1rem;
   margin: 3rem auto;
-  max-width: 1080px;
+  max-width: 1140px;
   border: 1px solid rgba(16, 49, 47, 0.25);
 }
 
-.carousel-section .carousel-item img {
-  width: 100%;
-  height: auto;
-  max-height: 600px;
-  object-fit: cover;
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.photo-card {
+  position: relative;
+  overflow: hidden;
   border-radius: 1rem;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.photo-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.photo-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 1rem;
+  box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.3);
+  transition: opacity 0.4s ease;
+}
+
+.photo-card:hover {
+  transform: translateY(-6px);
+  filter: brightness(1.05) saturate(1.1);
+}
+
+.photo-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+  z-index: 2000;
+}
+
+.photo-modal.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.photo-modal img {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 1rem;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+  object-fit: contain;
+}
+
+.photo-modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 2.5rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.photo-card.active {
+  z-index: 10;
+}
+
+.photo-card img.fullscreen {
+  position: fixed;
+}
+
+.photo-card:hover img {
+  transform: scale(1.08);
 }
 
 .pullquote {
@@ -306,4 +470,3 @@ footer {
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.45);
   border: 1px solid rgba(16, 49, 47, 0.25);
 }
-

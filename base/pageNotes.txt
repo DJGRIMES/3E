@@ -1,0 +1,43 @@
+# Homepage Outline (pseudo)
+1. Hero / Masthead
+   - simple centered headline + subheading and CTA copy
+   - stick to minimal markup; decorative backgrounds handled in CSS
+
+2. Save-the-Date carousel
+   - rotating carousel pulling images from `media/eventCarousel`
+   - slide indicators + prev/next controls
+   - follow with short block listing date/time/location + vibe bullets
+
+3. Event Photo Grid
+   - intro copy + 5 photos arranged as responsive grid
+   - hover zoom/popout effect so cards feel tactile instead of sliding
+
+4. Welcome / Vibe section
+   - two paragraphs describing craft + healing community
+   - include pullquote and expanded testimonial box under copy
+
+5. Community Voices
+   - row of three short quote cards
+   - additional vendor testimonial block below quotes (paragraphs)
+
+6. Mission / Story
+   - “Our Story” heading, quote about building a space, mention 70+ events
+   - right column photo of team (eventPhotos/third-eye-craft-selfie-with-poster)
+
+7. Grounding Message
+   - centered section with “This isn’t just a party — it’s a practice.” copy
+
+8. Footer / Signal + Form
+   - short “Get Connected” card describing Signal updates
+   - Signal CTA button + remote QR image
+   - single “Want to Vend?” card (referral focus)
+   - embedded Google Form for updates/contact straight below cards
+
+9. Merch Push
+   - two-column layout (image + merch copy + Signal CTA button)
+   - emphasize handmade merch + link to Signal group for inventory
+
+General notes:
+- Base styles from `css/main.css` + Bootstrap utilities keep spacing consistent
+- Tone remains warm, conversational, and community-first (see Language Guide)
+- Keep outlines lean; use this file for section structure rather than fixed copy
