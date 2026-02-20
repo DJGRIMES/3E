@@ -22,31 +22,14 @@
       <div class="container">
         <h2 class="section-title">Save the Date</h2>
         <p class="section-subtitle">Every gathering is a new chapter—craft, cannabis, and community wrapped in warm, friendly ceremony.</p>
-        <div id="saveTheDateCarousel" class="carousel slide flyer-carousel mt-4" data-bs-ride="carousel" data-bs-interval="6500">
-          <div class="carousel-indicators">
-            <button type="button" data-bs-target="#saveTheDateCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="March poster"></button>
-            <button type="button" data-bs-target="#saveTheDateCarousel" data-bs-slide-to="1" aria-label="April poster"></button>
-            <button type="button" data-bs-target="#saveTheDateCarousel" data-bs-slide-to="2" aria-label="Save the Date poster"></button>
-          </div>
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="media/eventCarousel/mar26.JPG" class="d-block w-100 flyer-carousel-image" alt="March craft affair flyer">
-            </div>
-            <div class="carousel-item">
-              <img src="media/eventCarousel/apr26.JPG" class="d-block w-100 flyer-carousel-image" alt="April craft affair flyer">
-            </div>
-            <div class="carousel-item">
-              <img src="media/eventCarousel/savethedate.JPG" class="d-block w-100 flyer-carousel-image" alt="Save the Date flyer">
-            </div>
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#saveTheDateCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#saveTheDateCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
+        <div
+          id="saveTheDateCarousel"
+          class="carousel slide flyer-carousel mt-4"
+          data-bs-ride="carousel"
+          data-bs-interval="6500"
+          data-carousel-manifest="media/eventCarousel/manifest.json"
+        >
+          <p class="text-muted small mb-0">Loading carousel…</p>
         </div>
       </div>
     </section>
@@ -57,19 +40,11 @@
           <h2>Third Eye in Motion</h2>
           <p class="mb-4">Snapshots from the craft tables, healing circles, and full-spectrum vibes that make every affair feel like home.</p>
         </div>
-        <div class="photo-grid">
-          <div class="photo-card">
-            <img src="media/eventPhotos/dj-performing-at-indoor-event.jpg" alt="DJ performing indoors" loading="lazy">
-          </div>
-          <div class="photo-card">
-            <img src="media/eventPhotos/fregrwli-vendor-table-at-event.jpg" alt="Vendor table display" loading="lazy">
-          </div>
-          <div class="photo-card">
-            <img src="media/eventPhotos/three-men-outside-standing-together.jpg" alt="Group standing outside" loading="lazy">
-          </div>
-          <div class="photo-card">
-            <img src="media/eventPhotos/three-men-posing-in-event-doorway.jpg" alt="Third Eye Craft Affair founders portrait" loading="lazy">
-          </div>
+        <div
+          class="photo-grid"
+          data-photo-grid-manifest="media/eventPhotos/manifest.json"
+        >
+          <p class="text-muted small mb-0">Loading photos…</p>
         </div>
       </div>
     </section>
@@ -197,6 +172,7 @@
     <img src="" alt="">
   </div>
 
+  <script src="js/media.js"></script>
   <script>
     const modal = document.getElementById('photoModal');
     const modalImage = modal.querySelector('img');
@@ -214,9 +190,20 @@
         modalImage.alt = '';
       }
     };
-    document.querySelectorAll('.photo-card img').forEach(img => {
-      img.addEventListener('click', () => toggleModal(true, img.src, img.alt));
-    });
+    const tryOpenModal = (img) => {
+      if (!img) return;
+      toggleModal(true, img.src, img.alt);
+    };
+
+    const photoGrid = document.querySelector('.photo-grid');
+    if (photoGrid) {
+      photoGrid.addEventListener('click', (event) => {
+        const target = event.target;
+        if (!(target instanceof Element)) return;
+        const hoveredImg = target.closest('.photo-card img');
+        tryOpenModal(hoveredImg);
+      });
+    }
     modal.addEventListener('click', event => {
       if (event.target === modal || event.target === closeBtn) {
         toggleModal(false);
