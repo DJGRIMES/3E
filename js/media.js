@@ -169,11 +169,6 @@ const hydratePhotoGrid = async (container) => {
       });
       card.appendChild(image);
 
-      const metadata = entry.metadata;
-      if (metadata && typeof metadata === "object") {
-        card.dataset.metadata = JSON.stringify(metadata);
-      }
-
       container.appendChild(card);
     });
   } catch (error) {

@@ -2,66 +2,35 @@
   "items": [
     {
       "filename": "dj-performing-at-indoor-event.jpg",
-      "alt": "DJ performing indoors",
-      "metadata": {
-        "caption": "Rhythm and light inside the venue"
-      }
+      "alt": "DJ performing indoors"
     },
     {
       "filename": "fregrwli-vendor-table-at-event.jpg",
-      "alt": "Vendor table display",
-      "metadata": {
-        "caption": "Community makers sharing their crafts"
-      }
+      "alt": "Vendor table display"
     },
     {
       "filename": "three-men-outside-standing-together.jpg",
-      "alt": "Group standing outside",
-      "metadata": {
-        "caption": "Friends greeting each other after the show"
-      }
+      "alt": "Group standing outside"
     },
     {
       "filename": "three-men-posing-in-event-doorway.jpg",
-      "alt": "Third Eye Craft Affair founders portrait",
-      "metadata": {
-        "caption": "Founders hold the space with sunrise energy"
-      }
+      "alt": "Third Eye Craft Affair founders portrait"
     },
     {
       "filename": "IMG_0300.jpeg",
-      "alt": "Vendors mingling while the sun sets",
-      "metadata": {
-        "caption": "Evening light through the crowd"
-      }
+      "alt": "Vendors mingling while the sun sets"
     },
     {
       "filename": "IMG_1090.jpeg",
-      "alt": "Artisan booths with warm lanterns",
-      "metadata": {
-        "caption": "Colorful booths and hand-crafted goods"
-      }
+      "alt": "Artisan booths with warm lanterns"
     },
     {
       "filename": "IMG_5020.jpeg",
-      "alt": "Attendees capturing moments on their phones",
-      "metadata": {
-        "caption": "Shared smiles in the community circle"
-      }
+      "alt": "Attendees capturing moments on their phones"
     },
     {
       "filename": "third-eye-craft-selfie-with-poster.jpg",
-      "alt": "Third Eye Craft Affair crew with poster",
-      "metadata": {
-        "caption": "Holding the vibe for the next gathering"
-      }
-    },
-    {
-      "filename": "founders.HEIC",
-      "alt": "Founders of Third Eye Craft Affair smiling at the camera",
-      "metadata": {
-        "caption": "The faces who built this space, backlit by sunrise energy"
-      }
+      "alt": "Third Eye Craft Affair crew with poster"
     }
   ]
 }

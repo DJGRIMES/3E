@@ -43,9 +43,7 @@
         <div
           class="photo-grid"
           data-photo-grid-manifest="media/eventPhotos/manifest.json"
-        >
-          <p class="text-muted small mb-0">Loading photos…</p>
-        </div>
+        ></div>
       </div>
     </section>
 
@@ -178,6 +176,7 @@
     const modalImage = modal.querySelector('img');
     const closeBtn = modal.querySelector('.photo-modal-close');
     const toggleModal = (show, src = '', alt = '') => {
+      document.body.classList.toggle('photo-modal-open', show);
       if (show) {
         modalImage.src = src;
         modalImage.alt = alt;
@@ -200,7 +199,9 @@
       photoGrid.addEventListener('click', (event) => {
         const target = event.target;
         if (!(target instanceof Element)) return;
-        const hoveredImg = target.closest('.photo-card img');
+        const card = target.closest('.photo-card');
+        const hoveredImg = card?.querySelector('img');
+        if (!hoveredImg) return;
         tryOpenModal(hoveredImg);
       });
     }

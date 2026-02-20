@@ -349,6 +349,8 @@ footer {
   height: 100%;
   object-fit: cover;
   display: block;
+  transition: transform 0.25s ease;
+  cursor: zoom-in;
 }
 
 .photo-card::after {
@@ -368,13 +370,15 @@ footer {
 .photo-modal {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(0, 0, 0, 0.92);
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 1rem;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.25s ease;
+  transition: opacity 0.3s ease, backdrop-filter 0.3s ease;
+  backdrop-filter: blur(6px);
   z-index: 2000;
 }
 
@@ -384,11 +388,20 @@ footer {
 }
 
 .photo-modal img {
-  max-width: 90vw;
-  max-height: 90vh;
+  width: min(100vw, 1400px);
+  max-width: 100%;
+  max-height: 96vh;
   border-radius: 1rem;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7);
   object-fit: contain;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  transform: scale(0.92);
+  opacity: 0;
+}
+
+.photo-modal.visible img {
+  transform: scale(1);
+  opacity: 1;
 }
 
 .photo-modal-close {
@@ -407,12 +420,12 @@ footer {
   z-index: 10;
 }
 
-.photo-card img.fullscreen {
-  position: fixed;
-}
-
 .photo-card:hover img {
   transform: scale(1.08);
+}
+
+body.photo-modal-open {
+  overflow: hidden;
 }
 
 .pullquote {

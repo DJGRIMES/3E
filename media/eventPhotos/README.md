@@ -3,6 +3,8 @@
 The `photo-grid` section under “Third Eye in Motion” now builds itself in the browser. The loader (`js/media.js`) fetches this manifest at runtime and renders each entry inside the grid element marked with `data-photo-grid-manifest`.
 
 1. **Drop new imagery** into this folder (`.jpg`, `.png`, etc.).
+   * Avoid HEIC, HEIF, or other formats that aren’t widely supported by browsers. Convert those files to JPEG/PNG before adding them so the gallery never falls back to showing `alt` text as a caption.
+   * Avoid HEIC, HEIF, or other formats that aren’t widely supported by browsers. Convert those files to JPEG/PNG before adding them so the gallery never falls back to showing `alt` text as a caption.
 2. **Add or update entries in `manifest.json`**. Order matters—items render top-to-bottom; entries should include:
    * `filename`: the image file name located in `media/eventPhotos/`.
    * `alt`: descriptive text for the `<img>` alt attribute.
